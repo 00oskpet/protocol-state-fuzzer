@@ -130,9 +130,10 @@ public class LearningSetupFactory {
 
         IOCache ioCache = new IOCache(ioOracle);
         IOFilter ioFilter = new IOFilter(ioCache, inputs);
+        IOValidator ioValidator = new IOValidator(ioFilter, alphabet);
 
         MultiTheoryTreeOracle mto = new MultiTheoryTreeOracle(
-                ioFilter, teachers, consts, solver);
+                ioValidator, teachers, consts, solver);
 
         SDTLogicOracle slo = new MultiTheorySDTLogicOracle(consts, solver);
 

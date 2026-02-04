@@ -31,7 +31,7 @@ import java.util.Arrays;
 import java.util.List;
 /**
  * The standard implementation of the TestRunner Interface.
- *
+ * @param <I>  the type of input symbols
  * @param <P>  the type of protocol messages
  * @param <E>  the type of execution context
  */
